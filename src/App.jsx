@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Hero from "./Components/Hero";
 import Header from "./Components/Shared/Header";
 import About from "./Components/About";
@@ -7,33 +7,23 @@ import Testimoniales from "./Components/Testimoniales";
 import Footer from "./Components/Shared/Footer";
 
 const Home = () => {
-  const ref = useRef(null);
-
   const [toogleAnimation, settoogleAnimation] = useState(false);
 
-  // useEffect(() => {
-  //   let main = document.querySelector(".containerDactive");
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0) {
+        settoogleAnimation(false);
+      }
+    };
 
-  //   function handleSCroll() {
-  //     if (main !== null) {
-  //       let topElm = main.offsetTop;
-  //       let btmElm = main.offsetTop + main.clientHeight;
-  //       let top_screen = window.scrollY;
-  //       let bottom_screen = window.scrollY + window.innerHeight;
-  //       if (bottom_screen > topElm && top_screen < btmElm) {
-  //         setCounterStart(true);
-  //       } else {
-  //         setCounterStart(false);
-  //       }
-  //     }
-  //   }
+    window.addEventListener("scroll", handleScroll);
 
-  //   window.addEventListener("scroll", handleSCroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-  //   return () => window.removeEventListener("scroll", handleSCroll);
-  // }, []);
-
-
+  
   const handleClick = () => {
     settoogleAnimation(true);
   };
