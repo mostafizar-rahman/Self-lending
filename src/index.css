@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #e0e8ea;
+}
+
+.heroDactive {
+  max-height: 640px;
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-out, transform 0.6s ease-out;
+}
+
+.heroActive {
+  max-height: 1000px;
+  overflow-y: auto;
+  transition: max-height 0.5s ease-in, transform 0.6s ease-in, overflow 0.6s;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.containerActive {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transition: transform 0.5s ease-in;
+}
+
+.containerDactive {
+  transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+}
+
+.heroActive::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1023) {
+  .containerActive {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transition: transform 0.5s ease-in;
+  }
+
+  .containerDactive {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* -------------- Ca */
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
