@@ -10,6 +10,30 @@ const Home = () => {
   const ref = useRef(null);
 
   const [toogleAnimation, settoogleAnimation] = useState(false);
+
+  // useEffect(() => {
+  //   let main = document.querySelector(".containerDactive");
+
+  //   function handleSCroll() {
+  //     if (main !== null) {
+  //       let topElm = main.offsetTop;
+  //       let btmElm = main.offsetTop + main.clientHeight;
+  //       let top_screen = window.scrollY;
+  //       let bottom_screen = window.scrollY + window.innerHeight;
+  //       if (bottom_screen > topElm && top_screen < btmElm) {
+  //         setCounterStart(true);
+  //       } else {
+  //         setCounterStart(false);
+  //       }
+  //     }
+  //   }
+
+  //   window.addEventListener("scroll", handleSCroll);
+
+  //   return () => window.removeEventListener("scroll", handleSCroll);
+  // }, []);
+
+
   const handleClick = () => {
     settoogleAnimation(true);
   };

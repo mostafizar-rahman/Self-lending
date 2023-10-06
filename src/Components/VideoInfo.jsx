@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./Shared/Button";
-import videoImag from "../assets/images/videoImg2.jpg";
+// import videoImag from "../assets/images/videoImg2.jpg";
 import playButton from "../assets/icons/play-button.png";
 import Title from "./Shared/Title";
 
@@ -21,7 +21,7 @@ const VideoInfo = () => {
       </div>
       <div className="h-[350px] rounded-t-[50%] scale-125 mt-52 relative">
         <img
-          src={videoImag}
+          src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
           alt=""
           className="h-[350px] w-full object-cover rounded-t-[50%] scale-125"
         />
